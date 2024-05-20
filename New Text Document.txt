@@ -1,0 +1,33 @@
+In this project, I leveraged Python and popular libraries like NumPy, Pandas, Matplotlib, and Seaborn to perform extensive data cleaning, preprocessing, and exploratory data analysis (EDA). By diving deep into customer demographics including gender, age group, state, occupation, and marital status, I uncovered valuable insights into purchasing patterns.
+
+One of the key findings was that married women aged 26-35, primarily located in UP, Maharashtra, and Karnataka, and working in sectors such as IT, Healthcare, and Aviation, demonstrated a strong inclination towards purchasing products from categories such as Food, Clothing, and Electronics.
+
+These insights not only shed light on customer preferences but also laid the foundation for optimizing inventory management strategies. By understanding customer behavior at a granular level, businesses can tailor their offerings to meet specific demographic needs, ultimately driving growth and profitability.
+
+Code Explanation:-
+
+Importing Libraries: The code starts by importing necessary libraries such as pandas, seaborn, matplotlib, and numpy. These libraries are used for data manipulation, visualization, and numerical computations.
+
+Ignoring Warnings:It sets up the environment to ignore any warnings that might occur during execution. This is achieved using warnings.filterwarnings("ignore").
+
+Reading Data:It reads the data from a CSV file named "sales_data.csv" into a pandas DataFrame named df.
+
+Data Cleaning:It drops unnecessary columns ('Status', 'unnamed1') from the DataFrame using df.drop() method.
+
+Handling Missing Values:It identifies missing values in the 'Amount' column and fills them with the mean amount using df['Amount'].fillna(mean_amount, inplace=True).
+
+Data Exploration:It provides an overview of the DataFrame's structure and statistics using methods like df.head(), df.info(), df.describe().
+
+Data Visualization:It creates various visualizations to explore the data further :-
+Count of Genders using sns.countplot() and Average Amount Spent by Gender using sns.barplot().
+Amount Spent by Age Group and Gender using sns.boxplot().
+Heatmap showing Average Amount Spent by Age Group and Occupation using sns.heatmap().
+Countplot of Top 10 Product Categories by Sales and Gender using sns.countplot().
+Pairplot for Age, Amount, and Orders by Occupation for Top 5 Occupations using sns.pairplot().
+Bar plot showing Total Amount Spent State-wise using sns.barplot().
+Bar plot showing Total Amount Spent State-wise by Occupation using sns.barplot() with hue representing occupation.
+
+Outputs:Each visualization provides insights into different aspects of the data, such as distribution, relationships, and trends.
+The explanations provided alongside the code give context and interpretation of each visualization, helping to understand the significance of the insights gained from them.
+
+The code conducts a thorough analysis of the sales data and visualizes various aspects to extract meaningful insights, aiding in decision-making and further exploration of the dataset.
